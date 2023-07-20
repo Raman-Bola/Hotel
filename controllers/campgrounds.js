@@ -30,8 +30,7 @@ module.exports.createCampground=async (req,res,next)=>{
 
 }
 
-module.exports.showCampground=async (req,res)=>{
-    
+module.exports.showCampground=async (req,res)=>{    
     const id= req.params.id;
     const campground= await Campground.findById(id).populate({
         path:'reviews',
